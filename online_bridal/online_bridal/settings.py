@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-atb%@-a=gdhj1&!-=@f3(h*5f9bk=8q!bc5byn$*h22&x=6&=c'
+# SECRET_KEY = 'django-insecure-atb%@-a=gdhj1&!-=@f3(h*5f9bk=8q!bc5byn$*h22&x=6&=c'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -70,15 +70,22 @@ TEMPLATES = [
 WSGI_APPLICATION = 'online_bridal.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/3.2/ref/settings/#databases
+# # Database
+# # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'mysql.connector.django',
+#         'NAME': 'online_bridal',
+#         'USER': 'root',
+#         'PASSWORD': '7CareBears5*',
+#         'HOST': '127.0.0.1',
+#         'PORT': '3306',
+#         'OPTIONS': {
+#             'autocommit': True
+#         }
+#     }
+# }
 
 
 # Password validation
@@ -123,3 +130,8 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+try:
+    from online_bridal.local_settings import *
+except ImportError:
+    pass
