@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = 'django-insecure-atb%@-a=gdhj1&!-=@f3(h*5f9bk=8q!bc5byn$*h22&x=6&=c'
+# SECRET_KEY = 
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'authentication.apps.AuthenticationConfig',
     'onlinebridal.apps.OnlinebridalConfig',
+    'vendors.apps.VendorsConfig',
 ]
 
 MIDDLEWARE = [
@@ -76,19 +77,7 @@ WSGI_APPLICATION = 'online_bridal.wsgi.application'
 # # Database
 # # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'mysql.connector.django',
-#         'NAME': 'online_bridal',
-#         'USER': 'root',
-#         'PASSWORD': '7CareBears5*',
-#         'HOST': '127.0.0.1',
-#         'PORT': '3306',
-#         'OPTIONS': {
-#             'autocommit': True
-#         }
-#     }
-# }
+
 
 
 # Password validation

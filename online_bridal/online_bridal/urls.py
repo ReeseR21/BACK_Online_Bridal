@@ -20,5 +20,6 @@ urlpatterns = [
     path('admin/', admin.site.urls), 
     path('api/auth/', include('authentication.urls')),
     path('api/onlinebridal/', include('onlinebridal.urls')),
+    path('api/vendors/', include('vendors.urls'))
 
 ]

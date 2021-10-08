@@ -13,3 +13,4 @@ urlpatterns = [
     path('all/', views.get_all_onlinebridal),
     path('', views.user_onlinebridal)
    ]
+

@@ -253,6 +253,82 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"refresh\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTYzMzc1NTM1OSwianRpIjoiZWNjMDIzOTgyMjJhNGVlMzhlZTc4MmE0ZWQ5M2I1ODciLCJ1c2VyX2lkIjozfQ.4ipMvlH2TBMkjRmrgZ0-XJkKb559CIl_yIrR994tlhA\",\n    \"access\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjMzNjY5MjU5LCJqdGkiOiIzN2QyM2I3M2RmNDE0MTA0YTNiZDVmYTQ4NGUwOGU3MyIsInVzZXJfaWQiOjN9.tAWLoXAmmUy-LQfWuSrWeGoKklNPUNlCw3ZV5rpwEzU\"\n}"
+						},
+						{
+							"name": "Login_User",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"nakkiar\",\r\n    \"password\": \"my1password\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/auth/login/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"auth",
+										"login",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 08 Oct 2021 05:55:21 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.7"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "438"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"refresh\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTYzMzc1ODkyMSwianRpIjoiMGFjZTg3MDI1ZDJjNDQxMmJiY2UxMGU4OTIzMDJmOTQiLCJ1c2VyX2lkIjoxfQ.iJ784kyYqC-3ypMTvbeg0WPBd4-bPU58npY-nMHWx7A\",\n    \"access\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjMzNjcyODIxLCJqdGkiOiIwZDM0Zjk4YjM0YTY0OTNkYWVkYTg3ZDA4MTlkZWNkZiIsInVzZXJfaWQiOjF9.KiK8RAmZ8QFu3GGrx1AUduZB9SScaZ4Bc1v8BexawYQ\"\n}"
 						}
 					]
 				}
@@ -476,6 +552,246 @@
 							],
 							"cookie": [],
 							"body": "[\n    {\n        \"id\": 4,\n        \"first_name\": \"Kia\",\n        \"last_name\": \"R\",\n        \"street\": \"123 ABC St\",\n        \"city\": \"Phoenix\",\n        \"state\": \"AZ\",\n        \"zip_code\": 12345,\n        \"phone\": \"555-123-456\",\n        \"bride\": false,\n        \"groom\": false,\n        \"guest\": true,\n        \"maidofhonor\": false,\n        \"bridesmaid\": false,\n        \"bestman\": false,\n        \"groomsman\": false,\n        \"flower_girl\": false,\n        \"ring_bearer\": false,\n        \"user_id\": 1\n    },\n    {\n        \"id\": 5,\n        \"first_name\": \"Love\",\n        \"last_name\": \"Reigns\",\n        \"street\": \"456 DEF St.\",\n        \"city\": \"Phoenix\",\n        \"state\": \"AZ\",\n        \"zip_code\": 23456,\n        \"phone\": \"555-234-567\",\n        \"bride\": false,\n        \"groom\": false,\n        \"guest\": true,\n        \"maidofhonor\": false,\n        \"bridesmaid\": false,\n        \"bestman\": false,\n        \"groomsman\": false,\n        \"flower_girl\": false,\n        \"ring_bearer\": false,\n        \"user_id\": 2\n    }\n]"
+						},
+						{
+							"name": "User",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/onlinebridal/all/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"onlinebridal",
+										"all",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 08 Oct 2021 05:24:58 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.7"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "610"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 4,\n        \"first_name\": \"Kia\",\n        \"last_name\": \"R\",\n        \"street\": \"123 ABC St\",\n        \"city\": \"Phoenix\",\n        \"state\": \"AZ\",\n        \"zip_code\": 12345,\n        \"phone\": \"555-123-456\",\n        \"bride\": false,\n        \"groom\": false,\n        \"guest\": true,\n        \"maidofhonor\": false,\n        \"bridesmaid\": false,\n        \"bestman\": false,\n        \"groomsman\": false,\n        \"flower_girl\": false,\n        \"ring_bearer\": false,\n        \"user_id\": 1\n    },\n    {\n        \"id\": 5,\n        \"first_name\": \"Love\",\n        \"last_name\": \"Reigns\",\n        \"street\": \"456 DEF St.\",\n        \"city\": \"Phoenix\",\n        \"state\": \"AZ\",\n        \"zip_code\": 23456,\n        \"phone\": \"555-234-567\",\n        \"bride\": false,\n        \"groom\": false,\n        \"guest\": true,\n        \"maidofhonor\": false,\n        \"bridesmaid\": false,\n        \"bestman\": false,\n        \"groomsman\": false,\n        \"flower_girl\": false,\n        \"ring_bearer\": false,\n        \"user_id\": 2\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Create_Bridal_Info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjMzNjczNzMwLCJqdGkiOiIxODg3NWUwYTc1MWE0ZTQxYWQ3YzU1MGFjYjMxNTk2NiIsInVzZXJfaWQiOjF9.rkOc5MJJixaOzX64EFttR3pZweBX7tW1v1Vg_cWEABo",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"first_name\": \"Taryn\",\r\n    \"last_name\": \"Smith\",\r\n    \"street\":\"789 Ghi St.\",\r\n    \"city\" : \"Phoenix\",\r\n    \"state\":\"AZ\",\r\n    \"zip_code\" :\"12345\",\r\n    \"phone\" :\"5553456789\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/onlinebridal/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"onlinebridal",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 08 Oct 2021 06:11:27 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.7"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "OPTIONS, POST"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "298"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 6,\n    \"first_name\": \"Taryn\",\n    \"last_name\": \"Smith\",\n    \"street\": \"789 Ghi St.\",\n    \"city\": \"Phoenix\",\n    \"state\": \"AZ\",\n    \"zip_code\": 12345,\n    \"phone\": \"5553456789\",\n    \"bride\": null,\n    \"groom\": null,\n    \"guest\": null,\n    \"maidofhonor\": null,\n    \"bridesmaid\": null,\n    \"bestman\": null,\n    \"groomsman\": null,\n    \"flower_girl\": null,\n    \"ring_bearer\": null,\n    \"user_id\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "Get_Bridal_Info_for_User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": [
+						{
+							"name": "Get_Bridal_Info_for_User",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjMzNjc0MjUzLCJqdGkiOiJiMDJiYTIzNDFiNTk0MDIxYjdjMTkwOWU0ZDg1NDM0YyIsInVzZXJfaWQiOjF9._E66oLzq--_P2F00MxC4NW5p89Urov3AGvYND3IYedo",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/onlinebridal/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"onlinebridal",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 08 Oct 2021 06:20:29 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.7"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "601"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 4,\n        \"first_name\": \"Kia\",\n        \"last_name\": \"R\",\n        \"street\": \"123 ABC St\",\n        \"city\": \"Phoenix\",\n        \"state\": \"AZ\",\n        \"zip_code\": 12345,\n        \"phone\": \"555-123-456\",\n        \"bride\": false,\n        \"groom\": false,\n        \"guest\": true,\n        \"maidofhonor\": false,\n        \"bridesmaid\": false,\n        \"bestman\": false,\n        \"groomsman\": false,\n        \"flower_girl\": false,\n        \"ring_bearer\": false,\n        \"user_id\": 1\n    },\n    {\n        \"id\": 6,\n        \"first_name\": \"Taryn\",\n        \"last_name\": \"Smith\",\n        \"street\": \"789 Ghi St.\",\n        \"city\": \"Phoenix\",\n        \"state\": \"AZ\",\n        \"zip_code\": 12345,\n        \"phone\": \"5553456789\",\n        \"bride\": null,\n        \"groom\": null,\n        \"guest\": null,\n        \"maidofhonor\": null,\n        \"bridesmaid\": null,\n        \"bestman\": null,\n        \"groomsman\": null,\n        \"flower_girl\": null,\n        \"ring_bearer\": null,\n        \"user_id\": 1\n    }\n]"
 						}
 					]
 				}
