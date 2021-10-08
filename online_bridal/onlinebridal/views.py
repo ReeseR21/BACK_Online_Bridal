@@ -1,17 +1,20 @@
-# Create your views here.
-from django.shortcuts import redirect, render
-from django.http import HttpResponse, HttpResponseRedirect
-from django.urls import reverse
+from rest_framework import status
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework.permissions import IsAuthenticated, AllowAny
+from rest_framework.decorators import api_view, permission_classes
 from .models import Onlinebridal
+from .serializers import OnlinebridalSerializer
+from django.contrib.auth.models import User
 
+class OnlinebridalList(APIView):
 
-# Create your views here.
-def index(request):
-    all_brides = Onlinebridal.objects.all()
-    context = {
-        'all_brides': all_brides
-    }
-    return render(request, 'Onlinebridals/index.html', context)
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        onlinebridal = Onlinebridal.objects.all()
+        serializer = OnlinebridalSerializer(onlinebridal, many=True)
+        return Response(serializer.data)
 
 # def detail(request, bride_id):
 #     single_bride = Onlinebridal.objects.get(pk=bride_id)
