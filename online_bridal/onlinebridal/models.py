@@ -9,7 +9,7 @@ class Onlinebridal(models.Model):
     city = models.CharField(max_length=25)
     state = models.CharField(max_length=25)
     zip_code = models.IntegerField(default=True)
-    phone = models.CharField(max_length=11)
+    phone = models.CharField(max_length=12)
     bride = models.BooleanField(null=True)
     groom = models.BooleanField(null=True)
     guest = models.BooleanField(null=True)

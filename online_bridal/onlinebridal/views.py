@@ -7,44 +7,44 @@ from .models import Onlinebridal
 from .serializers import OnlinebridalSerializer
 from django.contrib.auth.models import User
 
-class OnlinebridalList(APIView):
+# Get all bridal info, jwt-token required.
 
-    permission_classes = [IsAuthenticated]
+# class OnlinebridalList(APIView):
 
-    def get(self, request):
-        onlinebridal = Onlinebridal.objects.all()
+#     permission_classes = [IsAuthenticated]
+
+#     def get(self, request):
+#         onlinebridal = Onlinebridal.objects.all()
+#         serializer = OnlinebridalSerializer(onlinebridal, many=True)
+#         return Response(serializer.data)
+
+# Get all bridal info, no jwt-token required.
+@api_view(['GET'])
+@permission_classes([AllowAny])
+
+def  get_all_onlinebridal(request):
+    onlinebridal = Onlinebridal.objects.all()
+    serializer = OnlinebridalSerializer(onlinebridal, many=True)
+    return Response(serializer.data)
+
+# Used for only users that are signed in -- create/add info -- this is a protected endpoint.
+@api_view(['POST', 'GET'])
+@permission_classes([IsAuthenticated])
+def user_onlinebridal(request):
+
+    print('User', f"{request.user.id} {request.user.email} {request.user.username}")
+
+    if request.method == 'POST':
+        serializer = OnlinebridalSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save(user=request.user)
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+# Get all bridal data that's tied to a bride/user.
+    elif request.method == 'GET':
+        onlinebridal = Onlinebridal.objects.filter(user_id=request.user.id)
         serializer = OnlinebridalSerializer(onlinebridal, many=True)
         return Response(serializer.data)
 
-# def detail(request, bride_id):
-#     single_bride = Onlinebridal.objects.get(pk=bride_id)
-#     context = {
-#         'single_bride': single_bride
-#     }
-#     return render(request, 'Onlinebridals/detail.html', context)
-
-# def create(request):
-#     if request.method == "POST":
-#         name = request.POST.get('name')
-#         alter_ego = request.POST.get('alter_ego')
-#         primary = request.POST.get('primary')
-#         secondary = request.POST.get('secondary')
-#         catchphrase = request.POST.get('catchphrase')
-#         new_hero = Onlinebridal(name=name, alter_ego=alter_ego, primary_ability=primary, secondary_ability=secondary, catch_phrase=catchphrase)
-#         new_hero.save()
-#         return HttpResponseRedirect(reverse('Onlinebridals:index'))
-#     else:
-#         return render(request, 'Onlinebridals/create.html')
-
-# def edit(request):
-#     if request.method == "POST":
-#         name = request.POST.get('name')
-#         alter_ego = request.POST.get('alter_ego')
-#         primary = request.POST.get('primary')
-#         secondary = request.POST.get('secondary')
-#         catchphrase = request.POST.get('catchphrase')
-#         current_hero = Onlinebridal(name=name, alter_ego=alter_ego, primary_ability=primary, secondary_ability=secondary, catch_phrase=catchphrase)
-#         current_hero.save()
-#         return HttpResponseRedirect(reverse('Onlinebridals:index'))
-#     else:
-#         return render(request, 'Onlinebridals/create.html')
+    

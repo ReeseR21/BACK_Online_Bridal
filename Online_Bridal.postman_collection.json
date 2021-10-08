@@ -1,0 +1,485 @@
+{
+	"info": {
+		"_postman_id": "3f637745-8550-41b2-8059-632a72460d78",
+		"name": "Online_Bridal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Register_User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": [
+						{
+							"name": "Register_User",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\":\"nakkiar\",\r\n    \"password\": \"my1password\",\r\n    \"email\": \"nakkiasr@live.com\",\r\n    \"first_name\": \"Nakkia\",\r\n    \"last_name\": \"R\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/auth/register/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"auth",
+										"register",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 07 Oct 2021 17:56:55 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.7"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "88"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"username\": \"nakkiar\",\n    \"email\": \"nakkiasr@live.com\",\n    \"first_name\": \"Nakkia\",\n    \"last_name\": \"R\"\n}"
+						},
+						{
+							"name": "Register_User",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\":\"love\",\r\n    \"password\": \"passwordismine\",\r\n    \"email\": \"lovereigns@live.com\",\r\n    \"first_name\": \"Love\",\r\n    \"last_name\": \"Reigns\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/auth/register/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"auth",
+										"register",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 08 Oct 2021 04:28:31 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.7"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "90"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"username\": \"love\",\n    \"email\": \"lovereigns@live.com\",\n    \"first_name\": \"Love\",\n    \"last_name\": \"Reigns\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Login_User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": [
+						{
+							"name": "Login_User",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"love\",\r\n    \"password\": \"passwordismine\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/auth/login/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"auth",
+										"login",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 08 Oct 2021 04:55:59 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.7"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "438"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"refresh\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTYzMzc1NTM1OSwianRpIjoiZWNjMDIzOTgyMjJhNGVlMzhlZTc4MmE0ZWQ5M2I1ODciLCJ1c2VyX2lkIjozfQ.4ipMvlH2TBMkjRmrgZ0-XJkKb559CIl_yIrR994tlhA\",\n    \"access\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjMzNjY5MjU5LCJqdGkiOiIzN2QyM2I3M2RmNDE0MTA0YTNiZDVmYTQ4NGUwOGU3MyIsInVzZXJfaWQiOjN9.tAWLoXAmmUy-LQfWuSrWeGoKklNPUNlCw3ZV5rpwEzU\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "BrideInfo",
+			"item": [
+				{
+					"name": "Get_Bridal_Info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": [
+						{
+							"name": "User",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/onlinebridal/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"onlinebridal",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 08 Oct 2021 04:08:05 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.7"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "610"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 4,\n        \"first_name\": \"Kia\",\n        \"last_name\": \"R\",\n        \"street\": \"123 ABC St\",\n        \"city\": \"Phoenix\",\n        \"state\": \"AZ\",\n        \"zip_code\": 12345,\n        \"phone\": \"555-123-456\",\n        \"bride\": false,\n        \"groom\": false,\n        \"guest\": true,\n        \"maidofhonor\": false,\n        \"bridesmaid\": false,\n        \"bestman\": false,\n        \"groomsman\": false,\n        \"flower_girl\": false,\n        \"ring_bearer\": false,\n        \"user_id\": 1\n    },\n    {\n        \"id\": 5,\n        \"first_name\": \"Love\",\n        \"last_name\": \"Reigns\",\n        \"street\": \"456 DEF St.\",\n        \"city\": \"Phoenix\",\n        \"state\": \"AZ\",\n        \"zip_code\": 23456,\n        \"phone\": \"555-234-567\",\n        \"bride\": false,\n        \"groom\": false,\n        \"guest\": true,\n        \"maidofhonor\": false,\n        \"bridesmaid\": false,\n        \"bestman\": false,\n        \"groomsman\": false,\n        \"flower_girl\": false,\n        \"ring_bearer\": false,\n        \"user_id\": 2\n    }\n]"
+						},
+						{
+							"name": "User",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/onlinebridal/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"onlinebridal",
+										""
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 08 Oct 2021 04:10:13 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.7"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "WWW-Authenticate",
+									"value": "Bearer realm=\"api\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "58"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"detail\": \"Authentication credentials were not provided.\"\n}"
+						},
+						{
+							"name": "User",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjMzNjY5MjU5LCJqdGkiOiIzN2QyM2I3M2RmNDE0MTA0YTNiZDVmYTQ4NGUwOGU3MyIsInVzZXJfaWQiOjN9.tAWLoXAmmUy-LQfWuSrWeGoKklNPUNlCw3ZV5rpwEzU",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/onlinebridal/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"onlinebridal",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 08 Oct 2021 05:00:05 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.7"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "610"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 4,\n        \"first_name\": \"Kia\",\n        \"last_name\": \"R\",\n        \"street\": \"123 ABC St\",\n        \"city\": \"Phoenix\",\n        \"state\": \"AZ\",\n        \"zip_code\": 12345,\n        \"phone\": \"555-123-456\",\n        \"bride\": false,\n        \"groom\": false,\n        \"guest\": true,\n        \"maidofhonor\": false,\n        \"bridesmaid\": false,\n        \"bestman\": false,\n        \"groomsman\": false,\n        \"flower_girl\": false,\n        \"ring_bearer\": false,\n        \"user_id\": 1\n    },\n    {\n        \"id\": 5,\n        \"first_name\": \"Love\",\n        \"last_name\": \"Reigns\",\n        \"street\": \"456 DEF St.\",\n        \"city\": \"Phoenix\",\n        \"state\": \"AZ\",\n        \"zip_code\": 23456,\n        \"phone\": \"555-234-567\",\n        \"bride\": false,\n        \"groom\": false,\n        \"guest\": true,\n        \"maidofhonor\": false,\n        \"bridesmaid\": false,\n        \"bestman\": false,\n        \"groomsman\": false,\n        \"flower_girl\": false,\n        \"ring_bearer\": false,\n        \"user_id\": 2\n    }\n]"
+						}
+					]
+				}
+			]
+		}
+	]
+}
