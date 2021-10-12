@@ -1,23 +1,15 @@
-from django.urls import path
-# from onlinebridal import views
-from . import views
-# from .views import Getstarted
-# from .views import Vendors
+from django.contrib import admin
+from django.urls import path, include
 from rest_framework import routers
+from django.conf.urls import include
+from .views import BridalprofileViewSet
 
-# url pattern when jwt-token required.
-
-# urlpatterns = [
-#     path('', views.OnlinebridalList.as_view())
-#    ]
-
-# Url pattern used with get all bridal info when no token required.
+router = routers.DefaultRouter()
+router.register('bridalprofile', BridalprofileViewSet)
 
 urlpatterns = [
-    # path('all/', views.get_all_onlinebridal),
-    path('', views.onlinebridal),
-    # path('getstarted/', Getstarted.as_view()),
-    # path('vendors/', Vendors.as_view())
-
-   ]
+    path('', include(router.urls)),
+    path('new/', admin.site.urls), 
+    
+]
 

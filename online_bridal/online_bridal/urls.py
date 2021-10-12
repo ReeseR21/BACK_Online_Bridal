@@ -17,10 +17,8 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls import include
 
-urlpatterns = [
-    path('admin/', admin.site.urls), 
-    path('auth/', include('authentication.urls')),
 
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('onlinebridal/', include('onlinebridal.urls')), 
 ]
-    # path('api/auth/', include('authentication.urls')),
-    # path('api/onlinebridal/', include('onlinebridal.urls')),

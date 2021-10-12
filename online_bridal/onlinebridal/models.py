@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-class Onlinebridal(models.Model):
+class Bridalprofile(models.Model):
     PARTICIPATION = (
         ('BR','Bride'),
         ('GR', 'Groom'),
@@ -25,8 +25,8 @@ class Onlinebridal(models.Model):
     participation = models.CharField(blank=False, max_length=15, choices=PARTICIPATION)
 
 
-class BridalParty(models.Model):    
-    onlinebridal = models.ForeignKey(Onlinebridal, on_delete=models.CASCADE, default=True)
+class Bridalparty(models.Model):    
+    bridalprofile = models.ForeignKey(Bridalprofile, on_delete=models.CASCADE, default=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE, default=True)
     first_name = models.CharField(blank=False, max_length=25)
     last_name = models.CharField(max_length=25)
@@ -38,8 +38,8 @@ class BridalParty(models.Model):
     email = models.EmailField(blank=False, max_length=50)
 
 
-class GuestList(models.Model):
-    onlinebridal = models.ForeignKey(Onlinebridal, on_delete=models.CASCADE,default=True)
+class Guestlist(models.Model):
+    bridalprofile = models.ForeignKey(Bridalprofile, on_delete=models.CASCADE,default=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE, default=True)
     first_name = models.CharField(blank=False, max_length=25)
     last_name = models.CharField(max_length=25)

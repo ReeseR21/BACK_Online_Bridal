@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'onlinebridal.apps.OnlinebridalConfig',
     # 'vendor.apps.VendorConfig',
     'corsheaders',
-    # 'api',
 ]
 
 MIDDLEWARE = [

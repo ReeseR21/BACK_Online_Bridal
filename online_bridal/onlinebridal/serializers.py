@@ -1,19 +1,19 @@
 from rest_framework import serializers
-from .models import GuestList, Onlinebridal
-from .models import BridalParty
-from .models import GuestList
+from .models import Bridalprofile
+from .models import Bridalparty
+from .models import Guestlist
 
-class OnlinebridalSerializer(serializers.ModelSerializer):
+class BridalprofileSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Onlinebridal
+        model = Bridalprofile
         fields = ['id', 'first_name', 'last_name', 'street', 'city', 'state', 'zip_code', 'phone', 'email', 'bride', 'groom', 'guest', 'maidofhonor', 'bridesmaid', 'bestman', 'groomsman', 'flower_girl', 'ring_bearer', 'user_id']
 
-class BridalPartySerializer(serializers.ModelSerializer):
+class BridalpartySerializer(serializers.ModelSerializer):
     class Meta:
-        model = BridalParty
+        model = Bridalparty
         fields = ['id', 'first_name', 'last_name', 'street', 'city', 'state', 'zip_code', 'phone', 'email''user_id']
 
-class GuestListSerializer(serializers.ModelSerializer):
+class GuestlistSerializer(serializers.ModelSerializer):
     class Meta:
-        model = GuestList
+        model = Guestlist
         fields = ['id', 'first_name', 'last_name', 'street', 'city', 'state', 'zip_code', 'phone', 'email''user_id']
