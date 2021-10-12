@@ -40,7 +40,9 @@ INSTALLED_APPS = [
     'rest_framework',
     'authentication.apps.AuthenticationConfig',
     'onlinebridal.apps.OnlinebridalConfig',
-    'vendors.apps.VendorsConfig',
+    # 'vendor.apps.VendorConfig',
+    'corsheaders',
+    # 'api',
 ]
 
 MIDDLEWARE = [
@@ -51,7 +53,11 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+
 ]
+
+CORS_ORIGIN_ALLOW_ALL=True
 
 ROOT_URLCONF = 'online_bridal.urls'
 
