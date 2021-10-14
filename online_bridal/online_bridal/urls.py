@@ -22,5 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('onlinebridal/', include('onlinebridal.urls')),
     path('auth/', obtain_auth_token),
+    path('vendor/', include('vendor.urls')),
+
 
 ]

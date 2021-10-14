@@ -11,6 +11,8 @@ class Bridalprofile(models.Model):
     zip_code = models.IntegerField(default=True)
     phone = models.CharField(max_length=12)
     email = models.EmailField(blank=False, max_length=50)
+    image = models.ImageField(upload_to='images/', blank=True)
+
 
 
 class Bridalparty(models.Model):    
